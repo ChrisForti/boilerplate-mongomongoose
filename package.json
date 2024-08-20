@@ -1,5 +1,4 @@
 {
-
   "name": "fcc-mongo-mongoose-challenges",
   "version": "0.0.1",
   "description": "A boilerplate project",
@@ -11,8 +10,8 @@
     "body-parser": "^1.15.2",
     "dotenv": "^8.2.0",
     "express": "^4.12.4",
+    "mongodb": "^6.8.0",
     "mongoose": "^5.11.15"
-    
   },
   "repository": {
     "type": "git",
@@ -24,5 +23,4 @@
     "express"
   ],
   "license": "MIT"
-   
 }

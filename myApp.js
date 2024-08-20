@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 // Connect to MongoDB using mongoose
 mongoose
-  .connect("your_mongodb_atlas_uri", {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
