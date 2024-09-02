@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 // Connect to MongoDB using mongoose
 mongoose
   .connect(process.env.MONGO_URI, {
+    useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -102,8 +103,11 @@ const findAndUpdate = (personName, done) => {
   );
 };
 
-const removeById = (personId, done) => {
-  done(null /*, data*/);
+const removeById = function (personId, done) {
+  Person.findByIdAndRemove(personId, (err, removedDoc) => {
+    if (err) return console.error(err);
+    done(null, removedDoc);
+  });
 };
 
 const removeManyPeople = (done) => {
