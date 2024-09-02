@@ -8,7 +8,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log("Successfully connected to MongoDB");
+    console.log("\x1b[34mSuccessfully connected to MongoDB\x1b[0m");
   });
 
 const Schema = mongoose.Schema;
